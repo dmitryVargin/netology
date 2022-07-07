@@ -39,7 +39,7 @@ const { argv } = yargs(hideBin(process.argv))
       console.log(currentDate);
     }
   })
-  .command('add [options]', 'Прибавляет заданное время к текущей дате', (yargs) => yargs
+  .command('add [options]', 'Прибавляет заданные день/месяц/год к текущей дате', (yargs) => yargs
     .option('year', {
       alias: 'y',
       type: 'number',
@@ -63,7 +63,7 @@ const { argv } = yargs(hideBin(process.argv))
   })
   .command(
     'sub [options]',
-    'Отнимает заданное время от текущей даты',
+    'Отнимает заданные день/месяц/год от текущей даты',
     (yargs) => yargs
       .option('year', {
         alias: 'y',

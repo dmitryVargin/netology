@@ -1,11 +1,12 @@
 {
-  "name": "task1.2",
+  "name": "edu_node_cli",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "bin": {
     "datetime": "./dateTime.js",
     "thinkNumber": "./thinkNumber.js"
   },
+  "repository": "https://github.com/dmitryVargin/netology",
   "dependencies": {
     "date-fns": "^2.28.0",
     "yargs": "^17.5.1"
