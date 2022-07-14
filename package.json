@@ -4,7 +4,9 @@
   "version": "1.0.1",
   "bin": {
     "datetime": "./dateTime.js",
-    "thinkNumber": "./thinkNumber.js"
+    "thinkNumber": "./thinkNumber.js",
+    "headAndTails": "./headAndTails.js",
+    "analyzeLog": "./analyzeLog.js"
   },
   "repository": "https://github.com/dmitryVargin/netology/tree/task1.2",
   "dependencies": {
