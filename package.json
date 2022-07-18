@@ -1,7 +1,7 @@
 {
   "name": "edu_node_cli",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "bin": {
     "datetime": "./epics/dateTime.js",
     "thinkNumber": "./tepics/hinkNumber.js",
