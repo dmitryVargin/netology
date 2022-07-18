@@ -4,11 +4,11 @@ import { stdin as input, stdout as output } from 'node:process';
 import * as readline from 'node:readline/promises';
 import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers';
-import randomInteger from './helpers/randomInteger.js';
-import config from './configs/headAndTail.config.json'  assert {type: "json"};
+import randomInteger from '../helpers/randomInteger.js';
+import config from '../configs/headAndTail.config.json'  assert {type: "json"};
 import {join} from "path";
 import {homedir} from "os";
-import {incrementKey, saveKeyValue} from "./services/storage.service.js";
+import {incrementKey, saveKeyValue} from "../services/storage.service.js";
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -28,10 +28,9 @@ const { argv } = yargs(hideBin(process.argv))
     description: 'Имя файла для логирования без разрешения',
     type: 'string',
   }).middleware(async (argv)=>{
-      if(typeof argv.file === 'string') {
+      if(argv.file && typeof argv.file === 'string') {
           filePath = join(homedir(),`${argv.file}.json`);
-          const configPath = join(__dirname, "configs", "headAndTail.config.json")
-          console.log(configPath);
+          const configPath = join(__dirname, "..","configs", "headAndTail.config.json")
           await saveKeyValue("logFile", filePath, configPath)
       }else if(config.logFile) {
           filePath = config.logFile
